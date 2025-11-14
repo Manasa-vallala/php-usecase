@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        PROJECT_ID = "raghu2pm"
+        PROJECT_ID = "mitochondria-476610"
         REGION     = "us-central1"
-        REPO       = "php-app-repo"
-        IMAGE_NAME = "php-app"
+        REPO       = "php-usecase"
+        IMAGE_NAME = "php-usecase-image:latest "
         TAG        = "latest"
     }
 
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo "Pulling code from GitHub..."
                 git(
-                    url: 'https://github.com/raghu-kadali/php-app.git',
+                    url: 'https://github.com/Manasa-vallala/php-usecase.git',
                     branch: 'main'
                 )
             }
